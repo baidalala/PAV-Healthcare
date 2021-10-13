@@ -1,9 +1,11 @@
 {
+ "autoname": "naming_series:",
  "creation": "2021-10-11 10:33:34.184903",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "naming_series",
   "from_date",
   "to_date",
   "column_break_3",
@@ -34,9 +36,12 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "posting_date",
    "fieldtype": "Date",
-   "label": "Posting Date"
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
   },
   {
    "fieldname": "commission_details_section",
@@ -69,11 +74,18 @@
    "fieldname": "items",
    "fieldtype": "Table",
    "label": "Commissions",
-   "options": "Commissions"
+   "options": "Commission Compute Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "CC-.YY.-.MM-"
   }
  ],
  "is_submittable": 1,
- "modified": "2021-10-12 15:56:18.257808",
+ "modified": "2021-10-13 12:17:40.540985",
  "modified_by": "Administrator",
  "module": "PAV Healthcare",
  "name": "Commission Compute",

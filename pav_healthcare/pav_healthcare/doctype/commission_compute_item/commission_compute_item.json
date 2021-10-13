@@ -6,11 +6,13 @@
  "field_order": [
   "sales_invoice",
   "item_code",
-  "item_group",
   "item_name",
+  "column_break_4",
+  "item_group",
   "qty",
   "amount",
   "item_account",
+  "external_doctor_section_section",
   "external_doctor",
   "external_doctor_amount",
   "external_account",
@@ -19,17 +21,21 @@
   "internal_doctor",
   "internal_party_amount",
   "internal_account",
+  "marketer_section_column",
   "marketer",
   "market_amount",
   "marketer_account",
+  "other_section_section",
   "total_commission",
   "remaining_amount",
+  "sii_no",
+  "accounting_dimensions_column",
   "cost_center",
-  "project",
-  "sii_no"
+  "project"
  ],
  "fields": [
   {
+   "columns": 1,
    "fieldname": "sales_invoice",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -39,17 +45,18 @@
   {
    "fieldname": "item_account",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Item Account",
    "options": "Account"
   },
   {
+   "columns": 1,
    "fieldname": "amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Amount"
   },
   {
+   "columns": 1,
    "fieldname": "external_doctor",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -57,12 +64,14 @@
    "options": "Sales Partner"
   },
   {
+   "columns": 1,
    "fieldname": "external_doctor_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "External Doctor Amount"
   },
   {
+   "columns": 1,
    "fieldname": "internal_doctor",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -70,12 +79,14 @@
    "options": "Healthcare Practitioner"
   },
   {
+   "columns": 1,
    "fieldname": "internal_party_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Internal Party Amount"
   },
   {
+   "columns": 1,
    "fetch_from": "external_doctor.sales_partner_marketer",
    "fetch_if_empty": 1,
    "fieldname": "marketer",
@@ -85,18 +96,21 @@
    "options": "Sales Partner"
   },
   {
+   "columns": 1,
    "fieldname": "market_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Market Amount"
   },
   {
+   "columns": 1,
    "fieldname": "total_commission",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Total Commission"
   },
   {
+   "columns": 1,
    "fieldname": "remaining_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
@@ -109,11 +123,11 @@
   {
    "fieldname": "item_code",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Item",
    "options": "Item"
   },
   {
+   "columns": 1,
    "fetch_from": "item_code.item_name",
    "fieldname": "item_name",
    "fieldtype": "Data",
@@ -164,19 +178,43 @@
   {
    "fieldname": "external_doctor_balance",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "External Doctor Balance"
   },
   {
    "fieldname": "sii_no",
    "fieldtype": "Data",
-   "label": "SII No"
+   "label": "SII No",
+   "read_only": 1
+  },
+  {
+   "fieldname": "external_doctor_section_section",
+   "fieldtype": "Section Break",
+   "label": "Parties Section"
+  },
+  {
+   "fieldname": "marketer_section_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "other_section_section",
+   "fieldtype": "Section Break",
+   "label": "Other Section"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accounting_dimensions_column",
+   "fieldtype": "Column Break"
   }
  ],
  "istable": 1,
- "modified": "2021-10-12 16:34:19.270351",
+ "modified": "2021-10-13 12:28:33.794537",
  "modified_by": "Administrator",
  "module": "PAV Healthcare",
- "name": "Commissions",
+ "name": "Commission Compute Item",
  "owner": "Administrator",
  "permissions": [],
  "quick_entry": 1,
