@@ -12,6 +12,20 @@ def get_data():
 					"description":_("Commission Compute"),
 					"onboard": 1,
 				},
+					{
+					"type": "doctype",
+					"name": "Item Commission",
+					"description":_("Item Commission"),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "PAV Healthcare Settings",
+					"description":_("PAV Healthcare Settings"),
+					"onboard": 1,
+				},
+				
 			]
-		}
+		},
+		
 	]

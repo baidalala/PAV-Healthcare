@@ -1,0 +1,24 @@
+{
+ "add_total_row": 0,
+ "creation": "2021-10-13 13:22:14.390251",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2021-10-14 23:21:37.516868",
+ "modified_by": "Administrator",
+ "module": "PAV Healthcare",
+ "name": "Commissions Compute",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Commission Compute",
+ "report_name": "Commissions Compute",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}
