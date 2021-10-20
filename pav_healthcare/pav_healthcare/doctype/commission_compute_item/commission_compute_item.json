@@ -15,16 +15,18 @@
   "external_doctor_section_section",
   "external_doctor",
   "external_doctor_amount",
-  "external_account",
-  "external_doctor_balance",
+  "total_external_doctor",
+  "paid_for_external",
   "column_break_7",
   "internal_doctor",
   "internal_party_amount",
-  "internal_account",
+  "total_internal_doctor",
+  "paid_for_internal",
   "marketer_section_column",
   "marketer",
   "market_amount",
-  "marketer_account",
+  "total_marketer",
+  "paid_for_marketer",
   "other_section_section",
   "total_commission",
   "remaining_amount",
@@ -67,8 +69,9 @@
    "columns": 1,
    "fieldname": "external_doctor_amount",
    "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "External Doctor Amount"
+   "hidden": 1,
+   "label": "External Doctor Amount",
+   "options": "transaction_currency"
   },
   {
    "columns": 1,
@@ -82,8 +85,9 @@
    "columns": 1,
    "fieldname": "internal_party_amount",
    "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Internal Party Amount"
+   "hidden": 1,
+   "label": "Internal Party Amount",
+   "options": "transaction_currency"
   },
   {
    "columns": 1,
@@ -99,8 +103,9 @@
    "columns": 1,
    "fieldname": "market_amount",
    "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Market Amount"
+   "hidden": 1,
+   "label": "Market Amount",
+   "options": "transaction_currency"
   },
   {
    "columns": 1,
@@ -158,30 +163,6 @@
    "options": "Project"
   },
   {
-   "fieldname": "external_account",
-   "fieldtype": "Link",
-   "label": "External Doctor Account",
-   "options": "Account"
-  },
-  {
-   "fieldname": "internal_account",
-   "fieldtype": "Link",
-   "label": "Internal Doctor Account",
-   "options": "Account"
-  },
-  {
-   "fieldname": "marketer_account",
-   "fieldtype": "Link",
-   "label": "Marketer Account",
-   "options": "Account"
-  },
-  {
-   "fieldname": "external_doctor_balance",
-   "fieldtype": "Currency",
-   "hidden": 1,
-   "label": "External Doctor Balance"
-  },
-  {
    "fieldname": "sii_no",
    "fieldtype": "Data",
    "label": "SII No",
@@ -208,10 +189,52 @@
   {
    "fieldname": "accounting_dimensions_column",
    "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_external_doctor",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "External Doctor  Amount",
+   "options": "transaction_currency"
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_internal_doctor",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Internal Doctor Amount",
+   "options": "transaction_currency"
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_marketer",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Marketer Amount",
+   "options": "transaction_currency"
+  },
+  {
+   "default": "0",
+   "fieldname": "paid_for_external",
+   "fieldtype": "Check",
+   "label": "Paid For External"
+  },
+  {
+   "default": "0",
+   "fieldname": "paid_for_internal",
+   "fieldtype": "Check",
+   "label": "Paid For Internal"
+  },
+  {
+   "default": "0",
+   "fieldname": "paid_for_marketer",
+   "fieldtype": "Check",
+   "label": "Paid For Marketer"
   }
  ],
  "istable": 1,
- "modified": "2021-10-13 12:28:33.794537",
+ "modified": "2021-10-20 13:19:52.952900",
  "modified_by": "Administrator",
  "module": "PAV Healthcare",
  "name": "Commission Compute Item",

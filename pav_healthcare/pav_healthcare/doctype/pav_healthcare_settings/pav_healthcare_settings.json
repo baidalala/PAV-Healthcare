@@ -6,7 +6,8 @@
  "field_order": [
   "external_doctor_account",
   "internal_doctor_account",
-  "marketer_account"
+  "marketer_account",
+  "transaction_currency"
  ],
  "fields": [
   {
@@ -26,10 +27,16 @@
    "fieldtype": "Link",
    "label": "Marketer Account",
    "options": "Account"
+  },
+  {
+   "fieldname": "transaction_currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
   }
  ],
  "issingle": 1,
- "modified": "2021-10-11 10:54:34.304635",
+ "modified": "2021-10-19 13:27:56.151719",
  "modified_by": "Administrator",
  "module": "PAV Healthcare",
  "name": "PAV Healthcare Settings",
